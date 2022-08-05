@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LinqCafe">
+  <DataContextMoniker Name="/LinqCafeDataContext" />
+  <nestedChildShapes>
+    <classShape Id="66bb7a2f-aee4-4598-b032-e954eec34432" absoluteBounds="3.25, 1.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LinqCafeDataContext/tb_NCC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d287c7fb-8ff3-44b1-a239-a495beac1b51" absoluteBounds="3.265, 1.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

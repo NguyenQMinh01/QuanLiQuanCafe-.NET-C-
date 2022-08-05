@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_Quancaphe" Class="LinqCafeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MMTNGUYENQUANGM\SQLEXPRESS;Initial Catalog=QL_Quancaphe;Integrated Security=True" SettingsObjectName="QuanLyCafe.Properties.Settings" SettingsPropertyName="QL_QuancapheConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tb_NCC" Member="tb_NCCs">
+    <Type Name="tb_NCC">
+      <Column Name="MaNCC" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenNCC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

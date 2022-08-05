@@ -1,0 +1,765 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D281580-85F2-4921-972C-DD2D1ADF3B42}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyCafe</RootNamespace>
+    <AssemblyName>QuanLyCafe</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>coffee_mug.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="IronPython, Version=2.7.5.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\IronPython.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IronPython.Modules, Version=2.7.5.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\IronPython.Modules.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IronPython.SQLite, Version=2.7.5.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\IronPython.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IronPython.Wpf, Version=2.7.5.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\IronPython.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\Microsoft.Dynamic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Scripting, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\Microsoft.Scripting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.AspNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\Microsoft.Scripting.AspNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\Microsoft.Scripting.Metadata.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSetting.cs" />
+    <Compile Include="BaoCao\BC_CTHDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BC_CTHDB.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\BC_HDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BC_HDB.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\BC_KH.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BC_KH.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\Dataset_BC_CT_HDBan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dataset_BC_CT_HDBan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\DataSet_New.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_New.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\DBSHDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSHDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\QL_Quancaphe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QL_Quancaphe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\FormChuaBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\FormChuaBaoCao.Designer.cs">
+      <DependentUpon>FormChuaBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\HoaDonBanReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HoaDonBanReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\KhachHangReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KhachHangReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\QLCaFeDataSet.cs">
+      <DependentUpon>QLCaFeDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\QLCaFeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLCaFeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\Report_BC_CT_HDBan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_BC_CT_HDBan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\Report_BC_CT_HDNhap.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_BC_CT_HDNhap.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\Report_BC_DoanhThu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_BC_DoanhThu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\Report_DS_KhachHang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_DS_KhachHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\SanPhamReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SanPhamReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Business\Component\E_tb_Ban.cs" />
+    <Compile Include="Business\Component\E_tb_CTHDB.cs" />
+    <Compile Include="Business\Component\E_tb_CTHDN.cs" />
+    <Compile Include="Business\Component\E_tb_HDB.cs" />
+    <Compile Include="Business\Component\E_tb_HDN.cs" />
+    <Compile Include="Business\Component\E_tb_Khachhang.cs" />
+    <Compile Include="Business\Component\E_tb_Kho.cs" />
+    <Compile Include="Business\Component\E_tb_Loai.cs" />
+    <Compile Include="Business\Component\E_tb_NCC.cs" />
+    <Compile Include="Business\Component\E_tb_Nhanvien.cs" />
+    <Compile Include="Business\Component\E_tb_Sanpham.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_CTHDB.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_CTHDN.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_HDB.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_HDN.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_Khachhang.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_Kho.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_Loai.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_NCC.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_Nhanvien.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_Sanpham.cs" />
+    <Compile Include="DataAccess\ConnectDB.cs" />
+    <Compile Include="DataAccess\SQL_tb_Ban.cs" />
+    <Compile Include="DataAccess\SQL_tb_DoanhThu.cs" />
+    <Compile Include="DataAccess\SQL_tb_Khachhang.cs" />
+    <Compile Include="DataAccess\SQL_tb_CTHDB.cs" />
+    <Compile Include="DataAccess\SQL_tb_CTHDN.cs" />
+    <Compile Include="DataAccess\SQL_tb_HDB.cs" />
+    <Compile Include="DataAccess\SQL_tb_HDN.cs" />
+    <Compile Include="DataAccess\SQL_tb_Kho.cs" />
+    <Compile Include="DataAccess\SQL_tb_Loai.cs" />
+    <Compile Include="DataAccess\SQL_tb_NCC.cs" />
+    <Compile Include="DataAccess\SQL_tb_Nhanvien.cs" />
+    <Compile Include="DataAccess\SQL_tb_Sanpham.cs" />
+    <Compile Include="LinqCafe.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LinqCafe.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Ban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Ban.Designer.cs">
+      <DependentUpon>Ban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Data.cs" />
+    <Compile Include="Presentation\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_AI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_AI.Designer.cs">
+      <DependentUpon>fr_AI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_BC_Quy_HDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_BC_Quy_HDB.Designer.cs">
+      <DependentUpon>fr_BC_Quy_HDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_BC_Quy_KH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_BC_Quy_KH.Designer.cs">
+      <DependentUpon>fr_BC_Quy_KH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_BC_Quy_SP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_BC_Quy_SP.Designer.cs">
+      <DependentUpon>fr_BC_Quy_SP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_CTHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_CTHDB.Designer.cs">
+      <DependentUpon>fr_CTHDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_CTHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_CTHDN.Designer.cs">
+      <DependentUpon>fr_CTHDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_DangNhap.Designer.cs">
+      <DependentUpon>fr_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_DoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_DoanhThu.Designer.cs">
+      <DependentUpon>fr_DoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_HDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_HDB.Designer.cs">
+      <DependentUpon>fr_HDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_HDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_HDN.Designer.cs">
+      <DependentUpon>fr_HDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Ketnoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Ketnoi.Designer.cs">
+      <DependentUpon>fr_Ketnoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_KetNoiHeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_KetNoiHeThong.Designer.cs">
+      <DependentUpon>fr_KetNoiHeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Khachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Khachhang.Designer.cs">
+      <DependentUpon>fr_Khachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Kho.Designer.cs">
+      <DependentUpon>fr_Kho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Loai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Loai.Designer.cs">
+      <DependentUpon>fr_Loai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Main.Designer.cs">
+      <DependentUpon>fr_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_NCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_NCC.Designer.cs">
+      <DependentUpon>fr_NCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Nhanvien.Designer.cs">
+      <DependentUpon>fr_Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Sanpham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Sanpham.Designer.cs">
+      <DependentUpon>fr_Sanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Splash_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Splash_Screen.Designer.cs">
+      <DependentUpon>fr_Splash_Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_TKHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_TKHDB.Designer.cs">
+      <DependentUpon>fr_TKHDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_TK_SP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_TK_SP.Designer.cs">
+      <DependentUpon>fr_TK_SP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ReportClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QL_QuancapheDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QL_QuancapheDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaoCao\BC_CTHDB.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BC_CTHDB.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\BC_HDB.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BC_HDB.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\BC_KH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BC_KH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\FormChuaBaoCao.resx">
+      <DependentUpon>FormChuaBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\HoaDonBanReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HoaDonBanReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\KhachHangReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>KhachHangReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\Report_BC_CT_HDBan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_BC_CT_HDBan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\Report_BC_CT_HDNhap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_BC_CT_HDNhap.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\Report_BC_DoanhThu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_BC_DoanhThu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\Report_DS_KhachHang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_DS_KhachHang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\SanPhamReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SanPhamReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="LinqCafe.dbml.layout">
+      <DependentUpon>LinqCafe.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Presentation\Ban.resx">
+      <DependentUpon>Ban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_AI.resx">
+      <DependentUpon>fr_AI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_BC_Quy_HDB.resx">
+      <DependentUpon>fr_BC_Quy_HDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_BC_Quy_KH.resx">
+      <DependentUpon>fr_BC_Quy_KH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_BC_Quy_SP.resx">
+      <DependentUpon>fr_BC_Quy_SP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_CTHDB.resx">
+      <DependentUpon>fr_CTHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_CTHDN.resx">
+      <DependentUpon>fr_CTHDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_DangNhap.resx">
+      <DependentUpon>fr_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_DoanhThu.resx">
+      <DependentUpon>fr_DoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_HDB.resx">
+      <DependentUpon>fr_HDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_HDN.resx">
+      <DependentUpon>fr_HDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Ketnoi.resx">
+      <DependentUpon>fr_Ketnoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_KetNoiHeThong.resx">
+      <DependentUpon>fr_KetNoiHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Khachhang.resx">
+      <DependentUpon>fr_Khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Kho.resx">
+      <DependentUpon>fr_Kho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Loai.resx">
+      <DependentUpon>fr_Loai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Main.resx">
+      <DependentUpon>fr_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_NCC.resx">
+      <DependentUpon>fr_NCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Nhanvien.resx">
+      <DependentUpon>fr_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Sanpham.resx">
+      <DependentUpon>fr_Sanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Splash_Screen.resx">
+      <DependentUpon>fr_Splash_Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_TKHDB.resx">
+      <DependentUpon>fr_TKHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_TK_SP.resx">
+      <DependentUpon>fr_TK_SP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaoCao\Dataset_BC_CT_HDBan.xsc">
+      <DependentUpon>Dataset_BC_CT_HDBan.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCao\Dataset_BC_CT_HDBan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dataset_BC_CT_HDBan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BaoCao\Dataset_BC_CT_HDBan.xss">
+      <DependentUpon>Dataset_BC_CT_HDBan.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCao\DataSet_New.xsc">
+      <DependentUpon>DataSet_New.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCao\DataSet_New.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_New.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BaoCao\DataSet_New.xss">
+      <DependentUpon>DataSet_New.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCao\DBSHDB.xsc">
+      <DependentUpon>DBSHDB.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCao\DBSHDB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBSHDB.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BaoCao\DBSHDB.xss">
+      <DependentUpon>DBSHDB.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCao\QL_Quancaphe.xsc">
+      <DependentUpon>QL_Quancaphe.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCao\QL_Quancaphe.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QL_Quancaphe.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BaoCao\QL_Quancaphe.xss">
+      <DependentUpon>QL_Quancaphe.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCao\QLCaFeDataSet.xsc">
+      <DependentUpon>QLCaFeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCao\QLCaFeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLCaFeDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BaoCao\QLCaFeDataSet.xss">
+      <DependentUpon>QLCaFeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LinqCafe.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>LinqCafe.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QL_QuancapheDataSet.xsc">
+      <DependentUpon>QL_QuancapheDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QL_QuancapheDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QL_QuancapheDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QL_QuancapheDataSet.xss">
+      <DependentUpon>QL_QuancapheDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\1Them.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2Sua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3Xoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_update_product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagram_v2_02 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome_preferences_system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lorrygreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort_ascend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XoaH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee_mug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="coffee_mug.ico" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\icons8-log-out-32.png" />
+    <None Include="Resources\icons8-connect-60.png" />
+    <None Include="Resources\icons8-table-top-view-48.png" />
+    <None Include="Resources\nen-tang-quan-ly-quan-cafe.jpg" />
+    <None Include="Resources\invoice1.png" />
+    <None Include="Resources\icons8-statistics-64.png" />
+    <None Include="Resources\icons8-customer-64.png" />
+    <None Include="Resources\invoice2.png" />
+    <None Include="Resources\icons8-customer-641.png" />
+    <None Include="Resources\icons8-statistics-58.png" />
+    <None Include="Resources\cart.jpg" />
+    <None Include="Resources\cart2.png" />
+    <None Include="Resources\money.png" />
+    <None Include="Resources\icons8-earnings-64.png" />
+    <None Include="Resources\icons8-booking-64.png" />
+    <Content Include="Resources\icons8-shop-24.png" />
+    <None Include="Resources\icons8-shop-241.png" />
+    <Content Include="Resources\NuocTangLuc.png" />
+    <None Include="Resources\pay.png" />
+    <Content Include="Resources\cake.png" />
+    <Content Include="Resources\tea.png" />
+    <Content Include="Resources\traGung.png" />
+    <Content Include="Resources\trasua.jpg" />
+    <Content Include="Resources\trasua.png" />
+    <Content Include="Resources\trasua2.png" />
+    <None Include="Resources\BackGroud.jpg" />
+    <None Include="Resources\BackGroud1.jpg" />
+    <None Include="Resources\BackGroud3.jpg" />
+    <None Include="Resources\BackGroud2.jpg" />
+    <Content Include="Resources\ban1.png" />
+    <None Include="Resources\Exit4.png" />
+    <None Include="Resources\Exit3.png" />
+    <None Include="Resources\Exit1.png" />
+    <None Include="Resources\ban21.png" />
+    <None Include="Resources\ban11.png" />
+    <Content Include="Resources\ban2.png" />
+    <None Include="Resources\tải xuống1.png" />
+    <None Include="Resources\tải xuống.png" />
+    <None Include="Resources\tải xuống %281%29.png" />
+    <None Include="Resources\trietlicuocsong.PNG" />
+    <None Include="Resources\Hinh-nen-dien-thoai-cu-te-39.jpg" />
+    <None Include="Resources\anh-nen-cute-cho-dien-thoai_085452139.jpg" />
+    <None Include="Resources\hinh-nen-gai-xinh-full-hd-cho-dien-thoai.jpg" />
+    <None Include="Resources\gg.PNG" />
+    <None Include="Resources\appdt11.PNG" />
+    <None Include="Resources\219225159_799901554054809_5906447919570090999_n.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
